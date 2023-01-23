@@ -1,16 +1,10 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text , Image, Pressable, TextInput, SafeAreaView, View} from 'react-native';
+import React, {useState} from 'react';
 
-// flex box of 2 call driver and main page
-
-export const Mainpage = () => {
+export default MainPage = () => {
     return (
-        
+        <View>
+            <Text>I'm Main page</Text>
+        </View>
     );
-}
-
-const styles = StyleSheet.create({
-  
-});
-
-
-// image source can be called from Network in the form of uri
+};
