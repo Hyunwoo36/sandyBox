@@ -1,20 +1,11 @@
 import { StyleSheet, Text , Image, Pressable, TextInput, SafeAreaView, View} from 'react-native';
 import React, {useState} from 'react';
 
-import { NavigationContainer, StackActions } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-const Stack = createNativeStackNavigator();
-
 import { AppButton } from './appButton.js';
-import { MainPage } from './MainPage.js';
 
-export const InputText = () => {
+export const InputText = ({ navigation }) => {
 
     const [text, onChangeText] = useState('Tap here to put your code!');
-    const onPress = () => {
-        alert('wow');
-    };
 
     return (
         <SafeAreaView style = {styles.container}>
@@ -23,9 +14,9 @@ export const InputText = () => {
                 onChangeText={onChangeText}
                 value= {text}
             />
-            <AppButton onPress = {onPress} style = {styles.button}/>
             
-            
+            <AppButton onPress = {() => {navigation.navigate('MainPage')}} style = {styles.button}/>
+        
             
         </SafeAreaView>
         
