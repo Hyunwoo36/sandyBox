@@ -5,12 +5,12 @@ export default MainPage = ({navigation}) => {
     return (
         <View style = {styles.container} >
             <View style = {styles.container_top}>
-                <TouchableOpacity onPress = {() => {navigation.navigate('WhereToPage')}} >
-                    <Text style = {styles.textOne}>Where To?</Text>
-                </TouchableOpacity>
+                
+                <Text style = {styles.textOne} onPress={()=>{navigation.navigate('WhereToPage')}}>Where To?</Text>
+                
             </View>
             <View style = {styles.container_bottom}>
-                <Text style = {styles.textSec}>Settings</Text>
+                <Text style = {styles.textSec} onPress= {()=>{navigation.navigate('SettingsPage')}}>Settings</Text>
             </View>
         </View>
     );

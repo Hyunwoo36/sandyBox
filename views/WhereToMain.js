@@ -1,27 +1,27 @@
 // this is the initial page when user enters where to?
-import { StyleSheet, Text, View, TouchableOpacity, Button} from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 
 export default WhereToMain = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.circle1}>
-          <Text style = {styles.text} title = "home" onPress={() => {navigation.navigate('UberPage')}}>Home</Text>
+          <Text style = {styles.text} onPress={() => {navigation.navigate('UberPage')}}>Home</Text>
       </View>
       <View style={styles.circle2}>
-        <Text style = {styles.text}>Hospital</Text>
+        <Text style = {styles.text} onPress={() => {navigation.navigate('UberPage')}}>Hospital</Text>
       </View>
       <View style={styles.circle3}>
-        <Text style = {styles.text}>hMart</Text>
+        <Text style = {styles.text} title = "home" onPress={() => {navigation.navigate('UberPage')}}>hMart</Text>
       </View>
       <View style={styles.circle4}>
-        <Text style = {styles.text}>UCSD</Text>
+        <Text style = {styles.text} title = "home" onPress={() => {navigation.navigate('UberPage')}}>UCSD</Text>
       </View>
       <View style={styles.circle5}>
-        <Text style = {styles.text}>Harry's Home</Text>
+        <Text style = {styles.text} title = "home" onPress={() => {navigation.navigate('UberPage')}}>Harry's Home</Text>
       </View>
       <View style={styles.circle6}>
-        <Text style = {styles.text}>Pacific Beach</Text>
+        <Text style = {styles.text} title = "home" onPress={() => {navigation.navigate('UberPage')}}>Pacific Beach</Text>
       </View>
     </View>
   );
