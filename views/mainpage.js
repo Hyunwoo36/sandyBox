@@ -1,12 +1,18 @@
-import { StyleSheet, Text , Image, Pressable, TextInput, SafeAreaView, View} from 'react-native';
+import { StyleSheet, Text , Image, Pressable, TextInput, SafeAreaView, View, TouchableOpacity} from 'react-native';
+
 import React, {useState} from 'react';
 
-export default MainPage = () => {
+export default MainPage = ({navigation}) => {
     return (
         <View style = {styles.container} >
+            
             <View style = {{flex:1, backgroundColor: 'rgba(64, 135, 110, 0.7)'}}>
-                <Text style = {styles.textOne}>Where To</Text>
+                <TouchableOpacity onPress = {() => {navigation.navigate('WhereToPage')}} >
+                    <Text style = {styles.textOne}>Where To?</Text>
+                </TouchableOpacity>
             </View>
+            
+            
             <View style = {{flex:1, backgroundColor: 'rgba(236, 105, 45, 0.7)'}}>
                 <Text style = {styles.textSec}>Settings</Text>
             </View>

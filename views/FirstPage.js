@@ -14,8 +14,6 @@ export default function FirstPage({ navigation }) {
       <LogoSvg/>
       <Text style = {styles.codeText}>Your code: </Text>
       <InputText navigation = {navigation} />
-      
-
       </ImageBackground>
     </View>
   );
