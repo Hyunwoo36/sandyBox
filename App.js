@@ -20,7 +20,7 @@ export default function App() {
         <Stack.Screen name="MainPage" component={MainPage} />
         <Stack.Screen name="WhereToPage" component = {WhereToMain} options = {{headerShown: false}}/>
         <Stack.Screen name="UberPage" component = {WhereToUberMode} options = {{headerShown: false}}/>
-        <Stack.Screen name="SettingsPage" component = {SettingsPage} options = {{headerShown: false}}/>      
+        <Stack.Screen name="SettingsPage" component = {SettingsPage} options = {{headerShown: false}}/> 
       </Stack.Navigator>
     </NavigationContainer>
   );

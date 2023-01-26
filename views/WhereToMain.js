@@ -1,4 +1,5 @@
 // this is the initial page when user enters where to?
+// TODOS: Send the touched circle's data to backend server then display the data on next page -> WhereToUberMode
 import { StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 

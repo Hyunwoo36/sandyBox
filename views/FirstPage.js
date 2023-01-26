@@ -1,20 +1,76 @@
 // this is the initial page when user enters
-import { StyleSheet, Text , ImageBackground, TextInput, View} from 'react-native';
+import { StyleSheet, Text , ImageBackground, TextInput, View, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {InputText} from './InputText.js';
 import Svg, {Path} from 'react-native-svg';
 
-const backgroundImg = require('../assets/background1.png');
+import { auth } from '../src/firebase/config.js';
+
+const backgroundImg = require('../assets/background2.png');
 
 export default function FirstPage({ navigation }) {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (user) {
+        navigation.replace("MainPage");
+      }
+    })
+
+    return unsubscribe
+  }, []);
+
+  const handleSignUp = () => {
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then(userCredentials => {
+        const user = userCredentials.user;
+        console.log('Registered with:', user.email);
+      })
+      .catch(error => alert(error.message))
+  };
+
+  const handleLogin = () => {
+    auth
+    .signInWithEmailAndPassword(email, password)
+    .then(userCredentials => {
+      const user = userCredentials.user;
+      console.log('Logged in with:', user.email);
+    })
+    .then(navigation.navigate("MainPage"))
+    .catch(error => alert(error.message))
+    
+  };
 
   return (
     <View style={styles.container}>
       <ImageBackground source = {backgroundImg} resizeMode = "cover" style={styles.image}>
       <LogoSvg/>
-      <Text style = {styles.codeText}>Your code: </Text>
+
+      <Text style = {styles.codeText}>Hi! Welcome to BubblY! </Text>
+      <TextInput placeholder = 'Email' value = {email} onChangeText = {setEmail} style = {styles.textEmail} />
+      <TextInput placeholder = 'Password' value = {password} onChangeText = {setPassword} style ={styles.textEmail} />
       <InputText navigation = {navigation} />
       </ImageBackground>
+
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          onPress={handleLogin}
+          style={styles.button}
+        >
+          <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={handleSignUp}
+          style={[styles.button, styles.buttonOutline]}
+        >
+          <Text style={styles.buttonOutlineText}>Register</Text>
+        </TouchableOpacity>
+      </View>
+
     </View>
   );
 }
