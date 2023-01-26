@@ -1,6 +1,6 @@
 import { StyleSheet, Text , View, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
-import { auth } from '../src/firebase/config.js';
+import { auth } from '../config/firebase.js';
 
 export default MainPage = ({navigation}) => {
 

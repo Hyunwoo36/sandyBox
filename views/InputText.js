@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 import { AppButton } from './appButton.js';
 
-import { auth } from '../src/firebase/config.js';
+import { auth } from '../config/firebase.js';
 
 export const InputText = ({ navigation }) => {
 

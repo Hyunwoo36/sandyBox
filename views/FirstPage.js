@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import {InputText} from './InputText.js';
 import Svg, {Path} from 'react-native-svg';
 
-import { auth } from '../src/firebase/config.js';
+import { auth } from '../config/firebase.js';
 
 const backgroundImg = require('../assets/background2.png');
 
