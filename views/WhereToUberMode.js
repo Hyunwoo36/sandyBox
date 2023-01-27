@@ -1,16 +1,24 @@
-import { StyleSheet, Text , TextInput, View} from 'react-native';
-import React, {useState} from 'react';
+import { StyleSheet, Text , TextInput, View, Image} from 'react-native';
+import React, {useState, useEffect} from 'react';
+
+const mapImg = require('../assets/mapImg.png');
 
 export default WhereToUberMode = ({ navigation }) => {
+
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate("WhereTo1C");
+        }, 5000); 
+    });
+    // after 5 seconds, navigate to next page
     return (
         <View style = {styles.container}>
             <View style={styles.circle}>
                 <Text style = {styles.textTitle}>Places</Text>
             </View>
             <Text style = {styles.textOne}>We are matching you a nearby PBV made by SandyBox</Text>
-            <View style = {styles.mapBox}>
-
-            </View>
+            
+            <Image style = {styles.mapBox} source = {mapImg}/>
             <Text style = {styles.textSec}>Estimated maximum time to match: 5 min..</Text>
             <View style = {styles.cancelButton}>
                 <Text>Cancel?</Text>
@@ -46,7 +54,6 @@ const styles = StyleSheet.create({
         height: 240,
         left: 27,
         top: 362,
-        backgroundColor: 'rgba(120, 101, 76, 0.4)',
     },
     cancelButton: {
         position: 'absolute',

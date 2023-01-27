@@ -8,7 +8,11 @@ import FirstPage from './views/FirstPage.js';
 import WhereToMain from './views/WhereToMain.js';
 import WhereToUberMode from './views/WhereToUberMode.js';
 import SettingsPage from './views/SettingsPage.js';
+import AdjustBubble from './views/AdjustBubblePage.js';
 import CreateAccountPage from './views/CreateAccountPage.js';
+import WhereTo1C from './views/WhereTo1C.js';
+import WhereTo1D from './views/WhereTo1D.js';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -21,8 +25,11 @@ export default function App() {
         <Stack.Screen name="MainPage" component={MainPage} options = {{headerShown: false}}/>
         <Stack.Screen name="WhereToPage" component = {WhereToMain} options = {{headerShown: false}}/>
         <Stack.Screen name="UberPage" component = {WhereToUberMode} options = {{headerShown: false}}/>
-        <Stack.Screen name="SettingsPage" component = {SettingsPage} options = {{headerShown: false}}/>
+        <Stack.Screen name="AdjustBubblePage" component = {AdjustBubble} options = {{headerShown: false}}/>
         <Stack.Screen name="CreateAccountPage" component = {CreateAccountPage} options = {{headerShown: false}}/>
+        <Stack.Screen name="WhereTo1C" component = {WhereTo1C} options = {{headerShown: false}} />
+        {/* <Stack.Screen name="WhereTo1D" component = {WhereTo1D} options = {{headerShown: false}} /> */}
+        <Stack.Screen name="SettingsPage" component = {SettingsPage} options = {{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,110 +1,91 @@
-// this is the initial page when user enters Settings
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text , View, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
-
-export default SettingsPage = ({ navigation }) => {
-  return (
-    <View style = {styles.mainContainer}>
-        <View style = {styles.containerOne}>
-
+// this page's color is not fully covered
+export default SettingsPage = ({navigation}) => {
+    return (
+        <View style = {styles.container} >
+           <View style = {styles.box1}>
+                <Text style = {styles.text}>Ride history</Text>
+           </View>
+           <View style = {styles.box2}>
+                <Text style = {styles.text} onPress = {() => {navigation.navigate("AdjustBubblePage")}}>Adjust Bubbles</Text>
+           </View>
+           <View style = {styles.box3}>
+                <Text style = {styles.text}>Device Settings</Text>
+           </View>
+           <View style = {styles.box4}>
+                <Text style = {styles.text}>Account</Text>
+           </View>
+           <View style = {styles.box5}> 
+                <Text style = {styles.text}>Help</Text>
+           </View>
         </View>
-
-        <View style = {styles.containerTwo}>
-
-        </View>
-
-        <View style = {styles.containerThree}>
-
-        </View>
-
-        <View style = {styles.containerFour}>
-
-        </View>
-
-        <View style = {styles.containerFive}>
-
-        </View>
-
-        <View style = {styles.containerSix}>
-
-        </View>
-    </View>
-    
-  );
-}
-
+    );
+};
 
 const styles = StyleSheet.create({
-    mainContainer: {
+    container: {
         flex: 1,
         flexDirection: 'column',
-        justifyContent: 'space-evenly',
     },
-    containerOne: {
+    box1: {
         position: 'absolute',
-        width: 335,
-        height: 82,
-        left: 27,
-        top: 158,
-        borderRadius: 20,
-        backgroundColor: '#EDEBEB',
-        borderWidth: 0.5,
-
+        width: 347,
+        height: 100,
+        left: 21,
+        top: 70,
+        borderRadius: 30,
+        backgroundColor: 'rgba(236,105,45,0.3)',
+        justifyContent: 'center',
+        paddingLeft: 20,
     },
-    containerTwo: {
+    box2: {
         position: 'absolute',
-        width: 335,
-        height: 82,
-        left: 27,
-        top: 255,
-        borderRadius: 20,
-        backgroundColor: '#EDEBEB',
-        borderWidth: 0.5,
-
+        width: 347,
+        height: 100,
+        left: 21,
+        top: 205,
+        borderRadius: 30,
+        backgroundColor: 'rgba(236,105,45,0.3)',
+        justifyContent: 'center',
+        paddingLeft: 20,
     },
-    containerThree: {
+    box3: {
         position: 'absolute',
-        width: 335,
-        height: 82,
-        left: 27,
-        top: 352,
-        borderRadius: 20,
-        backgroundColor: '#EDEBEB',
-        borderWidth: 0.5,
-
+        width: 347,
+        height: 100,
+        left: 21,
+        top: 340,
+        borderRadius: 30,
+        backgroundColor: 'rgba(236,105,45,0.3)',
+        justifyContent: 'center',
+        paddingLeft: 20,
     },
-    containerFour: {
+    box4: {
         position: 'absolute',
-        width: 335,
-        height: 82,
-        left: 27,
-        top: 449,
-        borderRadius: 20,
-        backgroundColor: '#EDEBEB',
-        borderWidth: 0.5,
-
+        width: 347,
+        height: 100,
+        left: 21,
+        top: 475,
+        borderRadius: 30,
+        backgroundColor: 'rgba(236,105,45,0.3)',
+        justifyContent: 'center',
+        paddingLeft: 20,
     },
-    containerFive: {
+    box5: {
         position: 'absolute',
-        width: 335,
-        height: 82,
-        left: 27,
-        top: 546,
-        borderRadius: 20,
-        backgroundColor: '#EDEBEB',
-        borderWidth: 0.5,
-
+        width: 347,
+        height: 100,
+        left: 21,
+        top: 610,
+        borderRadius: 30,
+        backgroundColor: 'rgba(236,105,45,0.3)',
+        justifyContent: 'center',
+        paddingLeft: 20,
     },
-    containerSix: {
-        position: 'absolute',
-        width: 335,
-        height: 82,
-        left: 27,
-        top: 643,
-        borderRadius: 20,
-        backgroundColor: '#EDEBEB',
-        borderWidth: 0.5,
-
-    },
+    text: {
+        fontFamily: 'Arial Hebrew',
+        fontSize: 30,
+        textAlign: 'left',
+    }
 });
-
