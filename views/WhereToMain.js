@@ -6,22 +6,22 @@ export default WhereToMain = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.circle1}>
-          <Text style = {styles.text} onPress={() => {navigation.navigate('UberPage')}}>Home</Text>
+          <Text style = {styles.text1} onPress={() => {navigation.navigate('UberPage')}}>Home</Text>
       </View>
       <View style={styles.circle2}>
-        <Text style = {styles.text} onPress={() => {navigation.navigate('UberPage')}}>Hospital</Text>
+        <Text style = {styles.text2} onPress={() => {navigation.navigate('UberPage')}}>Hospital</Text>
       </View>
       <View style={styles.circle3}>
-        <Text style = {styles.text} title = "home" onPress={() => {navigation.navigate('UberPage')}}>hMart</Text>
+        <Text style = {styles.text3} title = "home" onPress={() => {navigation.navigate('UberPage')}}>hMart</Text>
       </View>
       <View style={styles.circle4}>
-        <Text style = {styles.text} title = "home" onPress={() => {navigation.navigate('UberPage')}}>UCSD</Text>
+        <Text style = {styles.text4} title = "home" onPress={() => {navigation.navigate('UberPage')}}>UCSD</Text>
       </View>
       <View style={styles.circle5}>
-        <Text style = {styles.text} title = "home" onPress={() => {navigation.navigate('UberPage')}}>Harry's Home</Text>
+        <Text style = {styles.text5} title = "home" onPress={() => {navigation.navigate('UberPage')}}>Harry's Home</Text>
       </View>
       <View style={styles.circle6}>
-        <Text style = {styles.text} title = "home" onPress={() => {navigation.navigate('UberPage')}}>Pacific Beach</Text>
+        <Text style = {styles.text6} title = "home" onPress={() => {navigation.navigate('UberPage')}}>Pacific Beach</Text>
       </View>
     </View>
   );
@@ -99,10 +99,31 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent: 'center',
   },
-  text: {
+  text1: {
     fontFamily: 'Arial Hebrew',
-    fontSize: 22, // this could be different for every circle
-    // fontWeight: 'bold',
-  }
+    fontSize: 30,
+  },
+  text2: {
+    fontFamily: 'Arial Hebrew',
+    fontSize: 14,
+  },
+  text3: {
+    fontFamily: 'Arial Hebrew',
+    fontSize: 21,
+  },
+  text4: {
+    fontFamily: 'Arial Hebrew',
+    fontSize: 28,
+  },
+  text5: {
+    fontFamily: 'Arial Hebrew',
+    fontSize: 21,
+  },
+  text6: {
+    fontFamily: 'Arial Hebrew',
+    fontSize: 14,
+  },
+  
+
 });
 

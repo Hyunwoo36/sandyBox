@@ -1,6 +1,6 @@
 import { StyleSheet, Text , View, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
-
+// this page's color is not fully covered
 export default MainPage = ({navigation}) => {
     return (
         <View style = {styles.container} >
@@ -24,15 +24,16 @@ const styles = StyleSheet.create({
     },
     container_top: {
         flex:1,
-        backgroundColor: 'rgba(64, 135, 110, 0.7)',
+        backgroundColor: 'rgba(125, 211, 159, 1)',
         justifyContent: 'center',
         alignItems: 'center',
     },
     container_bottom: {
         flex:1,
-        backgroundColor: 'rgba(236, 105, 45, 0.7)',
+        backgroundColor: 'rgba(194, 158, 239, 1)',
         justifyContent: 'center',
         alignItems: 'center',
+        
     },
     textOne: {
         fontFamily: 'Arial Hebrew',
