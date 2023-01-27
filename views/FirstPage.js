@@ -1,12 +1,15 @@
 // this is the initial page when user enters
 import { StyleSheet, Text , ImageBackground, TextInput, View, TouchableOpacity} from 'react-native';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {InputText} from './InputText.js';
 import Svg, {Path} from 'react-native-svg';
 
-import { auth } from '../config/firebase.js';
+// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { app, auth, db } from '../config/firebase.js';
 
 const backgroundImg = require('../assets/background2.png');
+
+// const auth = getAuth();
 
 export default function FirstPage({ navigation }) {
 
@@ -24,18 +27,17 @@ export default function FirstPage({ navigation }) {
   }, []);
 
   const handleSignUp = () => {
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .then(userCredentials => {
-        const user = userCredentials.user;
-        console.log('Registered with:', user.email);
-      })
-      .catch(error => alert(error.message))
+  
+    auth.createUserWithEmailAndPassword(auth, email, password)
+    .then(userCredentials => {
+      const user = userCredentials.user;
+      console.log('Registered with:', user.email);
+    })
+    .catch(error => alert(error.message))
   };
 
   const handleLogin = () => {
-    auth
-    .signInWithEmailAndPassword(email, password)
+    auth.signInWithEmailAndPassword(auth, email, password)
     .then(userCredentials => {
       const user = userCredentials.user;
       console.log('Logged in with:', user.email);
@@ -44,6 +46,7 @@ export default function FirstPage({ navigation }) {
     .catch(error => alert(error.message))
     
   };
+  // <InputText navigation = {navigation} /> // original InputText Component
 
   return (
     <View style={styles.container}>
@@ -52,25 +55,25 @@ export default function FirstPage({ navigation }) {
 
       <Text style = {styles.codeText}>Hi! Welcome to BubblY! </Text>
       <TextInput placeholder = 'Email' value = {email} onChangeText = {setEmail} style = {styles.textEmail} />
-      <TextInput placeholder = 'Password' value = {password} onChangeText = {setPassword} style ={styles.textEmail} />
-      <InputText navigation = {navigation} />
-      </ImageBackground>
+      <TextInput placeholder = 'Password' value = {password} onChangeText = {setPassword} style ={styles.textPassword} secureTextEntry/>
+      
+      
 
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           onPress={handleLogin}
-          style={styles.button}
+          style={styles.buttonLogin}
         >
-          <Text style={styles.buttonText}>Login</Text>
+          <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={handleSignUp}
-          style={[styles.button, styles.buttonOutline]}
+          style={styles.buttonSignup}
         >
-          <Text style={styles.buttonOutlineText}>Register</Text>
+          <Text style={styles.registerText}>Register</Text>
         </TouchableOpacity>
       </View>
-
+      </ImageBackground>
     </View>
   );
 }
@@ -115,6 +118,57 @@ const styles = StyleSheet.create({
     height: 106,
     top: 256,
     left: 140,
-  }
+  },
+  textEmail: {
+    position: 'absolute',
+    width: 288,
+    height: 41,
+    left: 51,
+    top: 443,
+    backgroundColor: 'white',
+    borderRadius: 30,
+    paddingLeft: 20,
+  },
+  textPassword: {
+    position: 'absolute',
+    width: 288,
+    height: 41,
+    left: 51,
+    top: 513,
+    backgroundColor: 'white',
+    borderRadius: 30,
+    paddingLeft: 20,
+  },
+  buttonContainer: {
+    flex:1,
+  },
+  buttonLogin: {
+    position: 'absolute',
+    width: 124,
+    height: 38,
+    left: 58,
+    top: 593,
+    backgroundColor: 'white',
+  },
+  buttonSignup: {
+    position: 'absolute',
+    width: 124,
+    height: 38,
+    left: 189,
+    top: 593,
+    backgroundColor: 'white',
+  },
+  loginText:{
+    fontFamily: 'Arial Hebrew',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  registerText: {
+    fontFamily: 'Arial Hebrew',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
 });
 

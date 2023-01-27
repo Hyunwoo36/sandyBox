@@ -1,12 +1,14 @@
 import { StyleSheet, Text , View, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
-import { auth } from '../config/firebase.js';
+
+import { getAuth } from "firebase/auth";
+
+const auth = getAuth();
 
 export default MainPage = ({navigation}) => {
 
     const handleSignOut = () => {
-        auth
-        .signOut()
+        signOut(auth)
         .then(() => {
             navigation.replace("FirstPage")
         })
