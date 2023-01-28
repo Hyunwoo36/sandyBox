@@ -1,23 +1,28 @@
 import { StyleSheet, Text , View, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
+import {Car, Gear, AdressCard, HandHoldingHand} from './VectorIcon.js';
 // this page's color is not fully covered
 export default SettingsPage = ({navigation}) => {
     return (
         <View style = {styles.container} >
            <View style = {styles.box1}>
-                <Text style = {styles.text}>Ride history</Text>
+                <Text style = {styles.text} onPress = {() => {navigation.navigate("RideHistoryPage")}}>Ride history</Text>
+                <Car />
            </View>
            <View style = {styles.box2}>
                 <Text style = {styles.text} onPress = {() => {navigation.navigate("AdjustBubblePage")}}>Adjust Bubbles</Text>
            </View>
            <View style = {styles.box3}>
                 <Text style = {styles.text}>Device Settings</Text>
+                <Gear />
            </View>
            <View style = {styles.box4}>
                 <Text style = {styles.text}>Account</Text>
+                <AdressCard />
            </View>
            <View style = {styles.box5}> 
                 <Text style = {styles.text}>Help</Text>
+                <HandHoldingHand />
            </View>
         </View>
     );

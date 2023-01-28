@@ -1,38 +1,45 @@
 // this is the initial page when user enters Settings
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View, Image} from 'react-native';
 import React, {useState} from 'react';
+import Svg, {Path, Rect} from 'react-native-svg';
+
 
 export default AdjustBubble = ({ navigation }) => {
   return (
     <View style = {styles.mainContainer}>
         <Text style = {styles.titleText}>Adjust Bubbles</Text>
         <View style = {styles.containerOne}>
-            <Text>A</Text><Text>Home</Text><Text>img</Text>
+            <Text style = {styles.textLeft}>A</Text><Text style ={styles.textMiddle}>Home</Text><Text style = {styles.imageRight}>img</Text>
         </View>
 
         <View style = {styles.containerTwo}>
-            <Text>B</Text><Text>UCSD</Text>
+            <Text style = {styles.textLeft}>B</Text>
+            <Text style ={styles.textMiddle}>UCSD</Text>
         </View>
 
         <View style = {styles.containerThree}>
-            <Text>C</Text><Text>hMart</Text>
+            <Text style = {styles.textLeft}>C</Text>
+            <Text style ={styles.textMiddle}>hMart</Text>
         </View>
 
         <View style = {styles.containerFour}>
-            <Text>D</Text><Text>Harry's home</Text>
+            <Text style = {styles.textLeft}>D</Text>
+            <Text style ={styles.textMiddle}>Harry's home</Text>
         </View>
 
         <View style = {styles.containerFive}>
-            <Text>E</Text><Text>Hospital</Text>
+            <Text style = {styles.textLeft}>E</Text>
+            <Text style ={styles.textMiddle}>Hospital</Text>
         </View>
 
         <View style = {styles.containerSix}>
-            <Text>F</Text><Text>Pacific Beach</Text>
+            <Text style = {styles.textLeft}>F</Text>
+            <Text style ={styles.textMiddle}>Pacific Beach</Text>
         </View>
     </View>
-    
   );
-}
+};
+
 
 
 const styles = StyleSheet.create({
@@ -50,8 +57,6 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         backgroundColor: 'rgba(245,184,26,0.3)',
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        padding: 20,
     },
     containerTwo: {
         position: 'absolute',
@@ -112,6 +117,25 @@ const styles = StyleSheet.create({
         left: 94,
         top: 69,
     },
-
+    textLeft: {
+        position: 'absolute',
+        fontFamily: 'Arial Hebrew',
+        fontSize: 30,
+        left: 20,
+        top: 27,
+        fontWeight: 'bold',
+    },
+    textMiddle: {
+        position: 'absolute',
+        fontFamily: 'Arial Hebrew',
+        fontSize: 25,
+        left: 110,
+        top: 27,
+    },
+    imageRight: {
+        position: 'absolute',
+        left: 280,
+        top: 27,
+    },
 });
 

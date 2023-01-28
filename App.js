@@ -10,6 +10,7 @@ import WhereToUberMode from './views/WhereToUberMode.js';
 import SettingsPage from './views/SettingsPage.js';
 import AdjustBubble from './views/AdjustBubblePage.js';
 import CreateAccountPage from './views/CreateAccountPage.js';
+import RideHistoryPage from './views/RideHistoryPage.js';
 import WhereTo1C from './views/WhereTo1C.js';
 import WhereTo1D from './views/WhereTo1D.js';
 
@@ -30,6 +31,7 @@ export default function App() {
         <Stack.Screen name="WhereTo1C" component = {WhereTo1C} options = {{headerShown: false}} />
         {/* <Stack.Screen name="WhereTo1D" component = {WhereTo1D} options = {{headerShown: false}} /> */}
         <Stack.Screen name="SettingsPage" component = {SettingsPage} options = {{headerShown: false}} />
+        <Stack.Screen name="RideHistoryPage" component = {RideHistoryPage} options = {{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
