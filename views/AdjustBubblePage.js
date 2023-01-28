@@ -1,7 +1,7 @@
 // this is the initial page when user enters Settings
 import { StyleSheet, Text, View, Image} from 'react-native';
 import React, {useState} from 'react';
-import Svg, {Path, Rect} from 'react-native-svg';
+
 
 
 export default AdjustBubble = ({ navigation }) => {
