@@ -2,7 +2,7 @@ import { StyleSheet, Text , View, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {RightArrow} from './VectorIcon.js';
 // this page's color is not fully covered
-export default RideHistoryPage = ({navigation}) => {
+export default DeviceSettingsPage = ({navigation}) => {
     return (
         <View style = {styles.container} >
            <View style = {styles.box1}>

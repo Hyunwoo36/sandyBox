@@ -10,7 +10,7 @@ import WhereToUberMode from './views/WhereToUberMode.js';
 import SettingsPage from './views/SettingsPage.js';
 import AdjustBubble from './views/AdjustBubblePage.js';
 import CreateAccountPage from './views/CreateAccountPage.js';
-import RideHistoryPage from './views/RideHistoryPage.js';
+import DeviceSettingsPage from './views/DeviceSettingsPage.js';
 import WhereTo1C from './views/WhereTo1C.js';
 import Whereto1F from './views/WhereTo1F.js';
 import WhereTo1G from './views/WhereTo1G.js';
@@ -31,7 +31,7 @@ export default function App() {
         <Stack.Screen name="CreateAccountPage" component = {CreateAccountPage} options = {{headerShown: false}}/>
         <Stack.Screen name="WhereTo1C" component = {WhereTo1C} options = {{headerShown: false}} />
         <Stack.Screen name="SettingsPage" component = {SettingsPage} options = {{headerShown: false}} />
-        <Stack.Screen name="RideHistoryPage" component = {RideHistoryPage} options = {{headerShown: false}} />
+        <Stack.Screen name="DeviceSettingsPage" component = {DeviceSettingsPage} options = {{headerShown: false}} />
         <Stack.Screen name="Whereto1F" component = {Whereto1F} options = {{headerShown: false}} />
         <Stack.Screen name="WhereTo1G" component = {WhereTo1G} options = {{headerShown: false}} />
         <Stack.Screen name="CheckListPage" component = {CheckListPage} options = {{headerShown: false}} />
