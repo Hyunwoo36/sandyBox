@@ -24,7 +24,7 @@ export default function CreateAccountPage ({ navigation }) {
       </View>
 
       <View style = {styles.buttonCreateAccount}>
-        <Text style = {styles.buttonText} onPress = {() => {navigation.navigate("MainPage")}}>Complete</Text>
+        <Text style = {styles.buttonText} onPress = {() => {navigation.navigate("CheckListPage")}}>Next</Text>
       </View>
       
       

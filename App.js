@@ -12,9 +12,9 @@ import AdjustBubble from './views/AdjustBubblePage.js';
 import CreateAccountPage from './views/CreateAccountPage.js';
 import RideHistoryPage from './views/RideHistoryPage.js';
 import WhereTo1C from './views/WhereTo1C.js';
-import WhereTo1D from './views/WhereTo1D.js';
 import Whereto1F from './views/WhereTo1F.js';
-
+import WhereTo1G from './views/WhereTo1G.js';
+import CheckListPage from './views/CheckListPage.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +33,10 @@ export default function App() {
         <Stack.Screen name="SettingsPage" component = {SettingsPage} options = {{headerShown: false}} />
         <Stack.Screen name="RideHistoryPage" component = {RideHistoryPage} options = {{headerShown: false}} />
         <Stack.Screen name="Whereto1F" component = {Whereto1F} options = {{headerShown: false}} />
+        <Stack.Screen name="WhereTo1G" component = {WhereTo1G} options = {{headerShown: false}} />
+        <Stack.Screen name="CheckListPage" component = {CheckListPage} options = {{headerShown: false}} />
+
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
