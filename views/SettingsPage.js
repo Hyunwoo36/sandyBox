@@ -18,7 +18,7 @@ export default SettingsPage = ({navigation}) => {
                 <Gear />
            </View>
            <View style = {styles.box4}>
-                <Text style = {styles.text}>Account</Text>
+                <Text style = {styles.text} onPress = {() => {navigation.navigate("CheckListPage")}}>Account</Text>
                 <AdressCard />
            </View>
            <View style = {styles.box5}> 
