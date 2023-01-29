@@ -7,15 +7,20 @@ export default WhereTo1C = ({ navigation }) => {
 
     useEffect(() => {
         setTimeout(() => {
+            // after 5 seconds, change the position of mapBox Image and Text text2, 
+            // remove text2 
+            // Create mapImg bottom
+            // create two texts
+
             navigation.navigate("");
         }, 5000); 
     });
-    // after 5 seconds, navigate to next page
+    
     return (
         <View style = {styles.container}>
             <Text style = {styles.text1}>We've matched you a car!</Text>
             <Text style = {styles.text2}>10HWDG80</Text>
-            <Image style = {styles.mapBox} source = {pbvImg}/>
+            <Image style = {styles.pbvImgstyle} source = {pbvImg}/>
             <View style = {styles.secondContainer}>
                 <Text style ={styles.textcontainer1}>The car has features like...</Text>
                 <Text style ={styles.textcontainer2}> - a ramp</Text>
@@ -53,7 +58,7 @@ const styles = StyleSheet.create({
         fontSize: 35,
         fontWeight: 'bold',
     },
-    mapBox: {
+    pbvImgstyle: {
         position: 'absolute',
         width: 320,
         height: 177,
