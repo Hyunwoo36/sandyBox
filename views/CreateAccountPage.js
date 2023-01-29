@@ -6,10 +6,10 @@ import Svg, {Path} from 'react-native-svg';
 const backgroundImg = require('../assets/background2.png');
 
 export default function CreateAccountPage ({ navigation }) {
-    const [name, setName] = useState('Full name (First / Last)');
-    const [email, setEmail] = useState('Enter your email');
-    const [password, setPassword] = useState('Enter your password');
-    const [confirmPassword, setConfirmPassword] = useState('Confirm Password');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
   return (
     <View style={styles.container}>
@@ -17,10 +17,10 @@ export default function CreateAccountPage ({ navigation }) {
       <LogoSvg/>
       <Text style = {styles.codeText}>Sign Up </Text>
       <View style = {styles.inputText}>
-        <TextInput onChangeText = {setName} value = {name} style = {styles.nameText}/>
-        <TextInput onChangeText = {setEmail} value = {email} style = {styles.emailText}/>
-        <TextInput onChangeText = {setPassword} value = {password} style = {styles.passwordText}/>
-        <TextInput onChangeText = {setConfirmPassword} value = {confirmPassword} style = {styles.confirmPasswordText}/>
+        <TextInput onChangeText = {setName} value = {name} style = {styles.nameText} placeholder = 'Full name (First / Last)'/>
+        <TextInput onChangeText = {setEmail} value = {email} style = {styles.emailText} placeholder = "Enter your email"/>
+        <TextInput onChangeText = {setPassword} value = {password} style = {styles.passwordText} placeholder = "Enter your password" secureTextEntry={true}/>
+        <TextInput onChangeText = {setConfirmPassword} value = {confirmPassword} style = {styles.confirmPasswordText} placeholder = "Confirm Password" secureTextEntry={true}/>
       </View>
 
       <View style = {styles.buttonCreateAccount}>

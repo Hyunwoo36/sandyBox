@@ -12,16 +12,16 @@ export default WhereToMain = ({ navigation }) => {
         <Text style = {styles.text2} onPress={() => {navigation.navigate('UberPage')}}>Hospital</Text>
       </View>
       <View style={styles.circle3}>
-        <Text style = {styles.text3} title = "home" onPress={() => {navigation.navigate('UberPage')}}>hMart</Text>
+        <Text style = {styles.text3} onPress={() => {navigation.navigate('UberPage')}}>hMart</Text>
       </View>
       <View style={styles.circle4}>
-        <Text style = {styles.text4} title = "home" onPress={() => {navigation.navigate('UberPage')}}>UCSD</Text>
+        <Text style = {styles.text4} onPress={() => {navigation.navigate('UberPage')}}>UCSD</Text>
       </View>
       <View style={styles.circle5}>
-        <Text style = {styles.text5} title = "home" onPress={() => {navigation.navigate('UberPage')}}>Harry's Home</Text>
+        <Text style = {styles.text5} onPress={() => {navigation.navigate('UberPage')}}>Harry's Home</Text>
       </View>
       <View style={styles.circle6}>
-        <Text style = {styles.text6} title = "home" onPress={() => {navigation.navigate('UberPage')}}>Pacific Beach</Text>
+        <Text style = {styles.text6} onPress={() => {navigation.navigate('UberPage')}}>Pacific Beach</Text>
       </View>
     </View>
   );

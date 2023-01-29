@@ -8,8 +8,8 @@ export default WhereTo1D = ({ navigation }) => {
     useEffect(() => {
         setTimeout(() => {
             navigation.navigate("Whereto1F");
-        }, 5000); 
-    });
+        }, 1000); 
+    }, []);
     // after 5 seconds, navigate to next page
     return (
         <View style = {styles.container}>

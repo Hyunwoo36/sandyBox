@@ -12,9 +12,9 @@ export default WhereTo1C = ({ navigation }) => {
             // Create mapImg bottom
             // create two texts
 
-            navigation.navigate("WhereTo1D");
-        }, 5000); 
-    });
+            navigation.navigate("Whereto1F");
+        }, 2000); 
+    }, []);
     
     return (
         <View style = {styles.container}>

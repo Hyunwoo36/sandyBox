@@ -8,8 +8,8 @@ const backgroundImg = require('../assets/background2.png');
 
 export default function FirstPage({ navigation }) {
 
-  const [email, setEmail] = useState('Enter your email');
-  const [password, setPassword] = useState('Enter your password');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
     <View style={styles.container}>
@@ -17,8 +17,8 @@ export default function FirstPage({ navigation }) {
       <LogoSvg/>
       <Text style = {styles.codeText}>Sign In </Text>
       <View style = {styles.inputText}>
-        <TextInput onChangeText = {setEmail} value = {email} style = {styles.emailText}/>
-        <TextInput onChangeText = {setPassword} value = {password} style = {styles.passwordText}/>
+        <TextInput onChangeText = {setEmail} value = {email} style = {styles.emailText} placeholder = "Enter your email"/>
+        <TextInput onChangeText = {setPassword} value = {password} style = {styles.passwordText} placeholder = "Enter your password" secureTextEntry={true}/>
       </View>
 
       <View style = {styles.buttonCreateAccount}>
