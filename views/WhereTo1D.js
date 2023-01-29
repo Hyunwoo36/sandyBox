@@ -7,7 +7,7 @@ export default WhereTo1D = ({ navigation }) => {
 
     useEffect(() => {
         setTimeout(() => {
-            navigation.navigate("");
+            navigation.navigate("Whereto1F");
         }, 5000); 
     });
     // after 5 seconds, navigate to next page

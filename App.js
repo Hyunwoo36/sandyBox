@@ -30,7 +30,7 @@ export default function App() {
         <Stack.Screen name="AdjustBubblePage" component = {AdjustBubble} options = {{headerShown: false}}/>
         <Stack.Screen name="CreateAccountPage" component = {CreateAccountPage} options = {{headerShown: false}}/>
         <Stack.Screen name="WhereTo1C" component = {WhereTo1C} options = {{headerShown: false}} />
-        {/* <Stack.Screen name="WhereTo1D" component = {WhereTo1D} options = {{headerShown: false}} /> */}
+        <Stack.Screen name="WhereTo1D" component = {WhereTo1D} options = {{headerShown: false}} />
         <Stack.Screen name="SettingsPage" component = {SettingsPage} options = {{headerShown: false}} />
         <Stack.Screen name="RideHistoryPage" component = {RideHistoryPage} options = {{headerShown: false}} />
         <Stack.Screen name="Whereto1F" component = {Whereto1F} options = {{headerShown: false}} />
